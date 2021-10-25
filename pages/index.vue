@@ -87,6 +87,12 @@ a{
   text-decoration: none;
 }
 
+@media(max-width: 600px){
+  .landing-page{
+    background: #2b4d57;
+  }
+}
+
 @media(max-width: 400px){
   .logo{
     width: 100%;

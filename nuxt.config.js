@@ -61,5 +61,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+   // Set for Netlify
+   target: 'static',
+
+   // Netlify Error 404
+   generate: {
+     fallback: true
+   }
 }
