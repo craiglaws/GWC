@@ -65,7 +65,7 @@ export default {
 }
 
 .content-holder{
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,6 +85,12 @@ export default {
 a{
   color: #fff;
   text-decoration: none;
+}
+
+@media(max-height:540px){
+  .content-holder{
+    padding: 70px 0;
+  }
 }
 
 @media(max-width: 600px){
