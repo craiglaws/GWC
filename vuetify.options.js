@@ -6,7 +6,7 @@ export default {
       themes: {
         light: {
           primary: '#2B4D57',
-          secondary: '#52a7cd',
+          secondary: '#E6324A',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
