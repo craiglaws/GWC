@@ -2,7 +2,7 @@
   <div class="landing-page">
     <div class="content-holder">
       <nuxt-img src="/logos/gwc-logo-light.png" class="logo"></nuxt-img>
-      <h2 class="font-white font-weight-regular text-center slogan mb-8">Making your business visable</h2>
+      <h2 class="font-white font-weight-regular text-center slogan mb-8">Making your business visible</h2>
       <h1 class="font-white font-weight-bold text-center mb-6 coming-soon">COMING SOON</h1>
       <div class="d-flex mt-8 icon-holder">
         <div class="d-flex icon-row">
@@ -11,7 +11,7 @@
             fab
             class="mr-8"
             target="_blank"
-            href="mailto:"
+            href="mailto:henrieta.gwc@gmail.com"
           >
             <v-icon large>mdi-email</v-icon>
           </v-btn>
@@ -20,7 +20,7 @@
             fab
             class="mr-8"
             target="_blank"
-            href="tel:"
+            href="tel:+447449523090"
           >
             <v-icon large>mdi-phone</v-icon>
           </v-btn>
@@ -31,7 +31,7 @@
             fab
             class="mr-8"
             target="_blank"
-            href=""
+            href="https://www.linkedin.com/in/henrieta-farkasova/"
           >
             <v-icon large>mdi-linkedin</v-icon>
           </v-btn>
