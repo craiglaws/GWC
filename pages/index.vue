@@ -18,7 +18,7 @@
           <v-btn
             color="secondary"
             fab
-            class="mr-8"
+            class="mr-8 mobile-icon"
             target="_blank"
             href="tel:+447449523090"
           >
@@ -110,10 +110,15 @@ a{
 
   .icon-holder{
     flex-direction: column;
+    align-items: center;
   }
 
   .icon-row{
     margin-bottom: 32px;
+  }
+
+  .mobile-icon{
+    margin-right: 0 !important;
   }
 }
 </style>
