@@ -2,7 +2,7 @@
   <div>
     <HeroHeader title="Coaching" image="/images/gwc-cover-photo.png"/>
     <v-row class="gwc-row-5">
-      <v-col cols="10" class="mx-auto">
+      <v-col cols="11" md="10" class="mx-auto">
         <h2 class="mb-1">Sell with Confidence, Grow with Confidence</h2>
         <TitleBorder color="secondary-bd"/>
         <CoachingGrid class="my-8" @scroll-to="scrollTo"/>
@@ -10,7 +10,7 @@
     </v-row>
     <ContactHero />
     <v-row class="">
-      <v-col cols="10" class="mx-auto">
+      <v-col cols="11" md="10" class="mx-auto">
         <div class="gwc-row">
             <!-- Account Management -->
           <v-row class="service gwc-mb-3 mt-10">
@@ -179,6 +179,9 @@ export default {
 
 .account-img{
   width: 100%;
+}
+li{
+  margin-bottom: 8px;
 }
 
 @media(max-width: 960px){
