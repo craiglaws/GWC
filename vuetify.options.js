@@ -9,7 +9,7 @@ export default {
           secondary: '#E6324A',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
+          error: '#ffa1a1',
           success: colors.green.accent3,
           fontAlt: '#ffffff',
           lightBg: '#f5b084'

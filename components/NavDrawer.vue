@@ -1,0 +1,147 @@
+<template>
+  <div>
+    <v-navigation-drawer
+      fixed
+      temporary
+      :value="navState"
+      color="primary"
+      class="nav-drawer"
+      
+    >
+      <div class="text-center mt-8" style="position: relative"  v-click-outside="clickOutsideNav">
+        <v-btn @click="closeNav" class="close-btn" fab small text>
+          <v-icon color="white">mdi-close</v-icon>
+        </v-btn>
+        <nuxt-link to="/">
+          <nuxt-img src="/logos/gwc-logo-light-nostrap.png" class="nav-logo mt-4"></nuxt-img>
+        </nuxt-link>
+        <div class="d-flex flex-column mt-8">
+          <v-btn
+            v-for="(navLink, i) in navOptions"
+            :key="i"
+            :to="navLink.path"
+            plain
+            small
+            link
+            @click="closeNav"
+            class="nav-btn mb-7"
+          >
+            {{navLink.text}}
+          </v-btn>
+        </div>
+        <div class="d-flex justify-center mt-8">
+          <a 
+            v-for="(social, i) in socials"
+            :key="i"
+            :href="social.link"
+            target="_blank"
+          >
+            <v-icon color="secondary" large class="pr-2">{{social.icon}}</v-icon>
+          </a>
+        </div>
+      </div>
+    </v-navigation-drawer>
+  </div>
+</template>
+
+<script>
+import { mapState } from "vuex";
+export default {
+  data(){
+    return{
+      navOptions: [
+         {
+          text: 'Coaching',
+          path: '/coaching'
+        },
+        {
+          text: 'Business Development',
+          path: '/business-development'
+        },
+        {
+          text: 'About',
+          path: '/about'
+        },
+        {
+          text: 'Contact',
+          path: '/contact'
+        },
+      ],
+      socials: [
+        {
+          link: "",
+          icon: "mdi-linkedin"
+        },
+        {
+          link: "",
+          icon: "mdi-youtube"
+        },
+        {
+          link: "",
+          icon: "mdi-email"
+        },
+      ]
+    }
+  },
+  methods: {
+    closeNav(){
+      this.$store.dispatch('nav/closeNav');
+    },
+    navTo(slug) {
+      //console.log(slug)
+      this.closeNav()
+      this.$router.push({ path: slug });
+    },
+
+    clickOutsideNav(e){
+      if(this.navState && e.target.className === "v-overlay__scrim"){
+        this.$store.dispatch('nav/closeNav');
+      }
+    }
+  },
+  computed: {
+    ...mapState({
+      navState: (state) => state.nav.navOpen
+    })
+  },
+}
+</script>
+
+<style scoped>
+.nav-drawer{
+  width: 400px !important;
+}
+.nav-logo{
+  width: 150px;
+}
+
+.nav-btn{
+  color: #fff !important;
+  text-transform: none !important;
+  font-weight: 700;
+  font-size: 16px !important;
+}
+.nav-btn:hover, .nav-btn:active, .nav-btn:focus{
+  transform: scale(1.1);
+}
+
+>>> .v-btn__content{
+  opacity: 1 !important;
+}
+
+.close-btn{
+  position: absolute;
+  top: -20px;
+  right: 20px;
+}
+
+@media(max-width: 700px){
+  .nav-drawer{
+    width: 100% !important;
+  }
+}
+
+
+
+
+</style>
