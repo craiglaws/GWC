@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-form class="" ref="form" @submit.prevent="handleSend">
+    <v-form class="" id="contact_form" ref="form" @submit.prevent="handleSend">
       <v-text-field
         v-model="enquiry.name"
         :rules="[rules.required]"
@@ -10,6 +10,7 @@
         solo
         flat
         class="gwc-form"
+        name="name"
       >
       </v-text-field>
       <v-text-field
@@ -20,6 +21,7 @@
         background-color="#fff"
         solo
         flat
+        name="email"
       >
       </v-text-field>
       <v-text-field
@@ -30,6 +32,7 @@
         background-color="#fff"
         solo
         flat
+        name="telNumber"
       >
       </v-text-field>
       <v-textarea
@@ -39,6 +42,7 @@
         full-width
         label="Message"
         v-model="enquiry.message"
+        name="message"
       ></v-textarea>
       <v-checkbox
         dense
@@ -81,7 +85,7 @@
         <div v-if="showSuccess" class="mt-4 py-1">
           <v-alert type="success" prominent>
             Thanks for your message.<br>
-            One of our team will be in touch as soon as possible.
+            I will be in touch as soon as possible.
           </v-alert>
         </div>
       </v-slide-y-transition>
@@ -89,6 +93,7 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com';
 export default {
    data() {
     return {
@@ -121,16 +126,27 @@ export default {
     },
 
     sendResults(){
+      emailjs.sendForm(process.env.NUXT_ENV_EMAIL_JS_SERVICE_ID, process.env.NUXT_ENV_EMAIL_JS_TEMPLATE_ID, '#contact_form', 
+      process.env.NUXT_ENV_EMAIL_JS_USER_ID)
+        .then((result) => {
+            this.loading = false
+            this.showSuccessAlert()
+            console.log(result.text);
+        })
+        .catch((error) => {
+            this.loading = false;
+            this.showErrorAlert()
+            console.log(error.text);
+        })
     },
     showSuccessAlert() {
       this.showSuccess = true;
       setTimeout(() => {
         this.showSuccess = false;
-        this.name = "";
-        this.business = "";
-        this.telNumber = "";
-        this.email = "";
-        this.message = "";
+        this.enquiry.name = "";
+        this.enquiry.telNumber = "";
+        this.enquiry.email = "";
+        this.enquiry.message = "";
       }, 3000);
     },
     showErrorAlert() {
