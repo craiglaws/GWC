@@ -115,5 +115,9 @@ export default {
   .about-img{
     display: none;
   }
+
+  .service-grid{
+    grid-template-columns: 1fr;
+  }
 }
 </style>
