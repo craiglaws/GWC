@@ -21,8 +21,8 @@ export default {
           title: "Business Visibility Strategy Planning",
         },
         {
-          icon: '/icons/calendar.png',
-          title: "Scheduling Appointments",
+          icon: '/icons/sales.png',
+          title: "Sales Activities ROI Analysis",
         },
         {
           icon: '/icons/networking.png',
@@ -37,16 +37,16 @@ export default {
           title: "Market Research",
         },
         {
-          icon: '/icons/filter.png',
-          title: "Building Pipeline",
+          icon: '/icons/social-media.png',
+          title: "Marketing Activities ROI Analysis",
         },
         {
           icon: '/icons/generation.png',
-          title: "Lead Generation",
+          title: "Sales Conversion Process Integration",
         },
         {
-          icon: '/icons/goal.png',
-          title: "Business Tasks",
+          icon: '/icons/business-plan.png',
+          title: "Project Management",
         },
       ]
     }

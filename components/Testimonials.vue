@@ -2,8 +2,7 @@
   <div class="gwc-row bg-primary-light">
     <v-row>
       <v-col cols="10" class="mx-auto">
-        <h2 class="font-white">Testimonials</h2>
-        <TitleBorder color="secondary-bd" class="mb-10"/>
+        <h2 class="font-white title-lg mb-10">Testimonials</h2>
         <VueSlickCarousel v-bind="settings">
           <TestimonialSliderItem 
             v-for="(slide, i) in slides"
@@ -109,7 +108,8 @@ export default {
             breakpoint: 750,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              arrows: false
             }
           }
         ]

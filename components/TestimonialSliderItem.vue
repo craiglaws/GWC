@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column align center px-10">
+  <div class="d-flex flex-column align center px-2 px-sm-10">
     <div class="font-white mb-4 ">
       <h2 class="font-white" v-html="slide.name"></h2>
       <p class="mb-0" v-html="slide.position"></p>

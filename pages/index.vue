@@ -1,14 +1,14 @@
 <template>
   <div>
-    <HeroHeader title="<span class='font-secondary'>Grow</span><br>With<br><span class='font-secondary'>Confidence</span>" image="/images/gwc-cover-photo.png"/>
+    <HeroHeader title="Sell <span class='font-secondary'>with</span> confidence<br><span class='font-secondary'>Grow </span>with <span class='font-secondary'>confidence</span>" mobileTitle="<span class='font-secondary'>Grow<br></span>With<br><span class='font-secondary'>Confidence</span>" image="/images/gwc-cover-photo.png"/>
     <v-row class="gwc-row-5">
       <v-col cols="11" md="10" class="mx-auto">
-        <h2 class="mb-1">INTRO TITLE GOES HERE</h2>
-        <TitleBorder color="secondary-bd mb-6"/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2 class="mb-1 mt-8">The Services I Offer</h2>
-        <TitleBorder color="secondary-bd mb-6"/>
+        <h2 class="mb-6">Grow your business with confidence</h2>
+        <p class="font-weight-bold font-secondary">"I believe in the value of investing in people, equipping them with the skills, tools and resources to excel."</p>
+        <p> Most people say they want to achieve their targets, but not many are willing to put in the work to make it happen. Selling is hard. If it was easy, everyone would do it.</p>
+        <p>Having worked as a Sales Manager and Account Manager for many years, I understand how important sales are for every business.  Growing your business and make it more visible doesn’t need to be difficult, time-consuming, or expensive. I have years of experience in building long-term business relationships and providing top quality customer service, with a great sales track record. I have prospected the whole of the UK in the past 13 years, so I understand the correct approach for each region.</p>
+        <p class="font-weight-bold font-primary">If you want to avoid hiring a full-time employee, including the costs of inducting & training, you will benefit from working with me.</p>
+        <h2 class="mb-6 mt-8">The Services I Offer</h2>
         <div class="service-grid">
           <div 
             v-for="(service, i) in services"
@@ -34,10 +34,9 @@
     <v-row class="gwc-row-5">
       <v-col cols="11" md="10" class="mx-auto">
         <div class="d-flex about-cont">
-          <nuxt-img src="/images/placeholder.png" class="about-img"></nuxt-img>
-          <div class="flex-grow-1">
-            <h2 class="mb-1">ABOUT TITLE GOES HERE</h2>
-            <TitleBorder color="secondary-bd mb-6"/>
+          <nuxt-img src="/images/gwc-hen-4.JPG" class="about-img"></nuxt-img>
+          <div class="flex-grow-1 my-auto">
+            <h2 class="mb-6">Who will you be working with?</h2>
             <p>An experienced and successful sales professional, I have worked with international, national and local businesses. I have covered many sectors – engineering, stationary, food & drink, hospitality and creative agency. You can be successful in any industry.</p>
             <v-btn color="secondary" to="/about">More About Me</v-btn>
           </div>
@@ -57,13 +56,13 @@ export default {
         {
           icon: '/icons/leadership.png',
           title: "Coaching",
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          text: "Sales coaching develops each salesperson's full potential. It boosts confidence and improves social, communication and questioning skills to discover areas for improvement and possibilities for new levels of success.",
           path: "/coaching"
         },
         {
           icon: '/icons/developing.png',
           title: "Business Development",
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          text: "Business development includes sales growth, business expansion, the formation of strategic partnerships and increased profitability. It is important in achieving sustainable business growth and focuses on creating long-term value.",
           path: "/business-development"
         },
       ]
@@ -107,7 +106,7 @@ export default {
 
 .about-img{
   width: 300px;
-  margin-right: 40px;
+  margin-right: 50px;
   object-fit: contain;
 }
 

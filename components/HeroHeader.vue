@@ -4,8 +4,8 @@
     :style="{ backgroundImage: 'url(' + image + ')' }"
   >
     <div class="hero-box">
-      <h1 class="title-lg font-white mb-1" v-html="title"></h1>
-      <TitleBorder color="secondary-bd mb-2"/>
+      <h1 class="title-lg font-white" v-show="$vuetify.breakpoint.mdAndUp" v-html="title"></h1>
+      <h1 class="title-lg font-white" v-show="$vuetify.breakpoint.smAndDown" v-html="mobileTitle"></h1>
       <h5 v-if="quote" class="font-secondary" v-html="quote"></h5>
     </div>
   </div>
@@ -15,6 +15,7 @@
 export default {
   props: {
     title: String,
+    mobileTitle: String,
     image: String,
     quote: String
   }
@@ -42,6 +43,13 @@ export default {
   padding: 40px;
 }
 
+@media(max-width: 600px){
+  .hero-bg{
+    background-color: rgba(43, 77, 87, 0.8);
+    background-image: none !important;
+    height: 50vh;
+  }
+}
 @media(max-width: 425px){
   .hero-box{
     margin: 0;

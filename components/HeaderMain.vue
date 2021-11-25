@@ -1,7 +1,7 @@
 <template>
   <v-app-bar
     app
-    flat
+
     hide-on-scroll
     height="100px"
     class="d-flex bg-primary justify-center"

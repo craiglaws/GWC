@@ -1,10 +1,12 @@
 <template>
   <div>
-    <HeroHeader title="Coaching" image="/images/gwc-cover-photo.png"/>
+    <HeroHeader title="Learn new sales skills,<br><span class='font-secondary'>Grow</span> your business with <span class='font-secondary'>confidence</span>" mobileTitle="Coaching" image="/images/coaching.jpg"/>
     <v-row class="gwc-row-5">
       <v-col cols="11" md="10" class="mx-auto">
-        <h2 class="mb-1">Sell with Confidence, Grow with Confidence</h2>
-        <TitleBorder color="secondary-bd"/>
+        <h2 class="mb-6">Sell with Confidence, Grow with Confidence</h2>
+        <p>Coaching is vital and can make a world of difference for your bottom line. Sales coaching develops each salesperson's full potential. It boosts confidence and improves social, communication and questioning skills to discover areas for improvement and possibilities for new levels of success.</p>
+        <p class="font-primary font-weight-bold">It helps continuously improve performance through feedback, practice, and repetition.</p>
+        <p>I am experienced and successful sales professional, I have worked with international, national, and local businesses. I have covered many sectors – engineering, stationary, food and drink, hospitality, and creative agency. You can be successful in any industry with the right support. I have received first class sales training and monthly coaching in my previous jobs, and it truly boosted my confidence in selling and being successful in every sales job, no matter what I sold.</p>
         <CoachingGrid class="my-8" @scroll-to="scrollTo"/>
       </v-col>
     </v-row>
@@ -13,72 +15,70 @@
       <v-col cols="11" md="10" class="mx-auto">
         <div class="gwc-row">
             <!-- Account Management -->
-          <v-row class="service gwc-mb-3 mt-10">
-            <v-col cols="12" md="8" class="py-0">
-              <h2 class="mb-1" ref="accountManagement">Account Management</h2>
-              <TitleBorder color="secondary-bd" class="mb-4" />
-              <div class="pr-md-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <ul>
-                    <li
-                      v-for="(item, i) in accountList"
-                      :key="i"
+          <div class="service gwc-mb-3 mt-10">
+            <div cols="12" md="8" class="py-0">
+              <h2 class="mb-4" ref="accountManagement">Account Management</h2>
+              <div class="d-flex">
+                <div class="pr-md-10 flex-grow-1">
+                  <ul>
+                      <li
+                        v-for="(item, i) in accountList"
+                        :key="i"
+                        class="management-list"
+                      >
+                        {{item}}
+                      </li>
+                    </ul>
+                    <v-btn
+                      color="secondary"
+                      to="/contact"
+                      class="mt-4"
                     >
-                      {{item}}
-                    </li>
-                  </ul>
+                      Book Now
+                    </v-btn>
                 </div>
-                <v-btn
-                  color="secondary"
-                  to="/contact"
-                  class="mt-4"
-                >
-                  Book Now
-                </v-btn>
-            </v-col>
-            <v-col cols="12" md="4" class="my-auto py-0" v-show="$vuetify.breakpoint.mdAndUp">
-              <nuxt-img class="account-img" src="/images/placeholder.png"></nuxt-img>
-            </v-col>
-          </v-row>
+                <nuxt-img class="account-img" src="/images/coaching-2.jpg" v-show="$vuetify.breakpoint.mdAndUp"></nuxt-img>
+              </div>
+            </div>
+
+          </div>
           <!-- Business Development -->
-          <v-row class="service gwc-mb-3">
-            <v-col cols="12" md="8" class="">
-              <h2 class="mb-1" ref="businessDevelopment">Business Development & Live Prospecting</h2>
-              <TitleBorder color="secondary-bd" class="mb-4" />
-              <div class="pr-md-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <ul>
-                    <li
-                      v-for="(item, i) in accountList"
-                      :key="i"
+          <div class="service gwc-mb-3">
+             <div cols="12" md="8" class="py-0">
+              <h2 class="mb-4" ref="accountManagement">Business Development & Live Prospecting</h2>
+              <div class="d-flex">
+                <div class="pr-md-10 flex-grow-1">
+                  <ul>
+                      <li
+                        v-for="(item, i) in busDevList"
+                        :key="i"
+                        class="management-list"
+                      >
+                        {{item}}
+                      </li>
+                    </ul>
+                    <v-btn
+                      color="secondary"
+                      to="/contact"
+                      class="mt-4"
                     >
-                      {{item}}
-                    </li>
-                  </ul>
+                      Book Now
+                    </v-btn>
                 </div>
-                <v-btn
-                  color="secondary"
-                  to="/contact"
-                  class="mt-4"
-                >
-                  Book Now
-                </v-btn>
-            </v-col>
-            <v-col cols="12" md="4" class="my-auto" v-show="$vuetify.breakpoint.mdAndUp">
-              <nuxt-img class="account-img" src="/images/placeholder.png"></nuxt-img>
-            </v-col>
-          </v-row>
+                <nuxt-img class="account-img" src="/images/bus-dev.jpg" v-show="$vuetify.breakpoint.mdAndUp"></nuxt-img>
+              </div>
+            </div>
+          </div>
           <v-row class ="gwc-mb-3">
             <!-- Online Sales -->
             <v-col cols="12" md="6" ref="salesCoaching" class="service-one service-cols gwc-mb-2">
               <div class="pr-md-6">
-                <h2 class="mb-1">Online Sales Coaching</h2>
-                <TitleBorder color="secondary-bd" class="mb-4"/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <h2 class="mb-4">Online Sales Coaching</h2>
                 <ul>
                   <li
                     v-for="(item, i) in onlineSalesList"
                     :key="i"
+                    class="management-list"
                   >
                     {{item}}
                   </li>
@@ -95,13 +95,12 @@
             <!-- Sales Assessment -->
             <v-col cols="12" md="6" ref="salesAssessment" class="service-cols">
               <div class="pl-md-6">
-                <h2 class="mb-1">Sales Assessment</h2>
-                <TitleBorder color="secondary-bd" class="mb-4"/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <h2 class="mb-4">Sales Assessment</h2>
                 <ul>
                   <li
                     v-for="(item, i) in salesAssessList"
                     :key="i"
+                    class="management-list"
                   >
                     {{item}}
                   </li>
@@ -147,8 +146,22 @@ export default {
         'How to effectively upsell /cross-sell to increase revenue from existing customers',
         'How to lead an effective meeting to achieve SMART objectives (agenda setting)',
         'Understanding your existing client’s purchasing behaviour',
-
       ],
+      busDevList: [
+        'How to meet monthly targets',
+        'How to create a step-by-step selling, prospecting and follow up system',
+        'How to eliminate all the activities that are costing you sales, time, and energy',
+        'How to make a professional introduction and building rapport',
+        'How to Handle objections confidently and professionally to improve levels of client commitment',
+        'How to effectively fact find to uncover new selling opportunities',
+        'How to build a pipeline',
+        'How to set sales conversions',
+        'Telephone Sales Training',
+        'How a positive belief and attitude will benefit telephone sales and prospecting',
+        'Spend a day in a field with you',
+        'Boost your self-confidence',
+
+      ]
     }
   },
   methods: {
@@ -178,10 +191,27 @@ export default {
   }
 
 .account-img{
-  width: 100%;
+  width: 400px;
+  max-height: 300px;
+  object-fit: cover;
 }
-li{
-  margin-bottom: 8px;
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.management-list{
+  background: url('/icons/arrows.png') no-repeat left top;
+  height: fit-content;
+  padding-left: 40px;
+  padding-top: 2px;
+  margin-bottom: 12px;
+}
+
+@media(max-width: 1200px){
+  .account-img{
+    display: none;
+  }
 }
 
 @media(max-width: 960px){

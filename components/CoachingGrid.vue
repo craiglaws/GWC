@@ -8,7 +8,6 @@
     >
       <nuxt-img class="service-icon mb-5" :src="service.icon"></nuxt-img>
       <h3 class="mb-3 card-header" v-html="service.title"></h3>
-      <p class="mb-0" v-html="service.text"></p>
     </div>
   </div>
 </template>
@@ -21,25 +20,21 @@ export default {
         {
           icon: '/icons/team.png',
           title: "Account Management",
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           goTo: "accountManagement"
         },
         {
           icon: '/icons/growth.png',
           title: "Business Development & Live Prospecting",
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           goTo: "businessDevelopment"
         },
         {
           icon: '/icons/online-sales.png',
           title: "Online Sales Coaching",
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           goTo: 'salesCoaching'
         },
         {
           icon: '/icons/check-list.png',
           title: "Sales Assessment",
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           goTo: "salesAssessment"
         },
       ]

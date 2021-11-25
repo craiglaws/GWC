@@ -1,24 +1,22 @@
 <template>
   <div>
-    <HeroHeader title="Business Development" image="/images/gwc-cover-photo.png"/>
+    <HeroHeader title="Opportunities for sales at all times" mobileTitle="Opportunities for<br>sales at all times" image="/images/bus-dev-2.jpg"/>
     <v-row class="gwc-row-5">
       <v-col cols="11" md="10" class="mx-auto">
-        <h2 class="mb-1">TITLE GOES HERE</h2>
-        <TitleBorder color="secondary-bd mb-6"/>
+        <h2 class="mb-6">Increase your sales. Increase your profitability.</h2>
+        <p>Business development includes sales growth, business expansion, the formation of strategic partnerships and increased profitability. Business Development is important achieve sustainable business growth. It focuses on creating long-term value rather than quick cash solutions.</p>
         <p>Having worked as a Sales Manager and Account Manager for many years, I understand how important sales are for every business. Even more important is they reflect your core values, professionalism and great customer service.</p>
         <p>I have seen how difficult it is for some businesses to employ experienced salespeople to represent their business and be passionate about their products or services. Being a salesperson is not just about getting the sale and forgetting about the customer. A salesperson must understand the business inside out and identify with the core values, mission, business objectives and business offering, and have great communication and problem-solving skills.</p>
         <p>If you want to avoid hiring a full-time sale person, including the costs of inducting & training, you could benefit from working with an external business developer. I work with self-employed business owners and small-to-medium businesses.</p>
 
-        <h2 class="mb-1 mt-8">The Services I Offer</h2>
-        <TitleBorder color="secondary-bd mb-6"/>
+        <h2 class="mb-6 mt-8">The Services I Offer</h2>
         <DevelopmentGrid />
       </v-col>
     </v-row>
     <ContactHero />
     <v-row class="gwc-row-5">
       <v-col cols="11" md="10" class="mx-auto">
-        <h2 class="mb-1">The 4 Simple Steps</h2>
-        <TitleBorder color="secondary-bd mb-6"/>
+        <h2 class="mb-4">The 4 Simple Steps</h2>
         <div v-for="(step, i) in simpleSteps" :key="i" class="d-flex mb-3">
           <h2 class="font-secondary align-self-start pr-2">{{i+1}}.</h2>
           <p class="mb-0 font-primary align-self-center font-weight-bold">{{step}}</p>
