@@ -3,6 +3,7 @@
     <v-row>
       <v-col cols="10" class="mx-auto">
         <h2 class="font-white title-lg mb-10">Testimonials</h2>
+        <client-only>
         <VueSlickCarousel v-bind="settings">
           <TestimonialSliderItem 
             v-for="(slide, i) in slides"
@@ -10,6 +11,7 @@
             :slide="slide"
           />
         </VueSlickCarousel>
+        </client-only>
       </v-col>
     </v-row>
   </div>
@@ -98,17 +100,8 @@ export default {
         slidesToScroll: 1,
         responsive: [
           {
-            breakpoint: 960,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            }
-          },
-          {
             breakpoint: 750,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
               arrows: false
             }
           }

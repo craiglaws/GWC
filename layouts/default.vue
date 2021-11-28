@@ -1,8 +1,6 @@
 <template>
   <v-app style="overflow: hidden"> 
-    <HeaderMain />
-    <!-- <NavDrawer /> -->
-    <NewNavDrawer />
+    <NewHeader />
     <v-main>
       <v-container fluid class="pa-0">
         <nuxt />

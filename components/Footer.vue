@@ -67,14 +67,6 @@ export default {
           text: 'Privacy Policy',
           path: '/privacy-policy'
         },
-         {
-          text: 'Coaching',
-          path: '/coaching'
-        },
-        {
-          text: 'Business Development',
-          path: '/business-development'
-        }
       ],
     }
   }
