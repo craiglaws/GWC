@@ -55,6 +55,11 @@ export default {
         icon: 'mdi-linkedin',
         link: 'https://www.linkedin.com/in/henrieta-farkasova/'
       },
+      {
+          text: "/GrowWithConfidence",
+          link: "https://www.facebook.com/Grow-with-Confidence-105375788569683",
+          icon: "mdi-facebook"
+        },
       ]
     }
   }
@@ -68,6 +73,11 @@ export default {
   color: #000000DE;
   text-decoration: none;
   font-weight: 600;
+  transition: .3s ease-in-out;
+}
+
+.contact-link:hover{
+  color: #E6324A
 }
 
 .contact-shadow{

@@ -24,7 +24,7 @@
             small
             link
             @click="closeNav"
-            class="nav-btn mb-7"
+            class="nav-btn mb-7 scale-hover"
           >
             {{navLink.text}}
           </v-btn>
@@ -69,15 +69,19 @@ export default {
       ],
       socials: [
         {
-          link: "",
+          link: "https://www.linkedin.com/in/henrieta-farkasova/",
           icon: "mdi-linkedin"
         },
         {
-          link: "",
+          link: "https://www.facebook.com/Grow-with-Confidence-105375788569683",
+          icon: "mdi-facebook"
+        },
+        {
+          link: "https://www.youtube.com/channel/UC04J-PyswfCclM_-FoQsghA",
           icon: "mdi-youtube"
         },
         {
-          link: "",
+          link: "mailto:henrieta.gwc@gmail.com",
           icon: "mdi-email"
         },
       ]

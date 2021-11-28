@@ -55,7 +55,7 @@
           <template v-slot:label>
           <div style="font-size: 12px; color: #fff">
             I agree for my details to be processed in accordance with GWC
-            <a href="" target="_blank" @click.stop style=" color: #fff">
+            <a href="www.growwithconfidence.uk" target="_blank" @click.stop style=" color: #fff">
               Privacy Policy
             </a>
           </div>

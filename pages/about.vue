@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroHeader title="I’m ready to share my experience<br>to help you <span class='font-secondary'>grow</span> with <span class='font-secondary'>confidence</span>"  mobileTitle="About Me" image="/images/gwc-hen-2.jpg"/>
+    <HeroHeader title="I’m ready to share my experience<br>to help you <span class='font-secondary'>grow</span> with <span class='font-secondary'>confidence.</span>"  mobileTitle="About Me" image="/images/gwc-hen-2.jpg"/>
     <v-row class="gwc-row-5">
         <v-col cols="11" md="10" class="mx-auto">
           <div class="d-flex mb-10" :class="{'flex-column': $vuetify.breakpoint.smAndDown}">

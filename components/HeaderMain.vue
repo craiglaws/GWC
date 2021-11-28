@@ -16,7 +16,8 @@
         <div class="d-flex">
           <v-menu
             open-on-hover
-            offset-y>
+            offset-y
+            role="menu">
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                 v-bind="attrs"
@@ -24,7 +25,7 @@
                 plain
                 small
                 link
-                class="nav-btn pr-6"
+                class="nav-btn pr-6 scale-hover"
               >
                 Services
                 <v-icon>mdi-menu-down</v-icon>
@@ -35,6 +36,7 @@
                 v-for="(item, i) in services"
                 :key="i"
                 :to="item.path"
+                role="menuitem"
               >
                 <v-list-item-title>{{ item.text }}</v-list-item-title>
               </v-list-item>
@@ -47,7 +49,7 @@
             plain
             small
             link
-            class="nav-btn pr-6"
+            class="nav-btn pr-6 scale-hover"
           >
             {{navLink.text}}
           </v-btn>
@@ -63,7 +65,7 @@
             :href="social.link"
             target="_blank"
           >
-            <v-icon color="white" class="pr-2">{{social.icon}}</v-icon>
+            <v-icon color="white" class="scale-hover pr-2">{{social.icon}}</v-icon>
           </a>
         </div>
       </div>
@@ -106,15 +108,19 @@ export default {
       ],
       socials: [
         {
-          link: "",
+          link: "https://www.linkedin.com/in/henrieta-farkasova/",
           icon: "mdi-linkedin"
         },
         {
-          link: "",
+          link: "https://www.facebook.com/Grow-with-Confidence-105375788569683",
+          icon: "mdi-facebook"
+        },
+        {
+          link: "https://www.youtube.com/channel/UC04J-PyswfCclM_-FoQsghA",
           icon: "mdi-youtube"
         },
         {
-          link: "",
+          link: "mailto:henrieta.gwc@gmail.com",
           icon: "mdi-email"
         },
       ]

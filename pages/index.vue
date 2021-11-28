@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroHeader title="Sell <span class='font-secondary'>with</span> confidence<br><span class='font-secondary'>Grow </span>with <span class='font-secondary'>confidence</span>" mobileTitle="<span class='font-secondary'>Grow<br></span>With<br><span class='font-secondary'>Confidence</span>" image="/images/gwc-cover-photo.png"/>
+    <HeroHeader title="Sell <span class='font-secondary'>with</span> confidence.<br><span class='font-secondary'>Grow </span>with <span class='font-secondary'>confidence.</span>" mobileTitle="<span class='font-secondary'>Grow<br></span>With<br><span class='font-secondary'>Confidence</span>" image="/images/gwc-cover-photo.png"/>
     <v-row class="gwc-row-5">
       <v-col cols="11" md="10" class="mx-auto">
         <h2 class="mb-6">Grow your business with confidence</h2>

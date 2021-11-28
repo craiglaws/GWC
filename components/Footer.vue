@@ -10,7 +10,7 @@
             :href="social.link"
             target="_blank"
           >
-            <v-icon color="white" large class="pr-2">{{social.icon}}</v-icon>
+            <v-icon color="white" large class="pr-2 scale-hover">{{social.icon}}</v-icon>
           </a>
         </div>
         <div class="mt-8 d-flex justify-center footer-link-holder">
@@ -18,7 +18,7 @@
             v-for="(link, i) in footerLinks"
             :key="i"
             :to="link.path"
-            class="footer-link pr-6"
+            class="footer-link pr-6 scale-hover"
           >
             {{link.text}}
           </nuxt-link>
@@ -34,15 +34,19 @@ export default {
     return{
       socials: [
         {
-          link: "",
+          link: "https://www.linkedin.com/in/henrieta-farkasova/",
           icon: "mdi-linkedin"
         },
         {
-          link: "",
+          link: "https://www.facebook.com/Grow-with-Confidence-105375788569683",
+          icon: "mdi-facebook"
+        },
+        {
+          link: "https://www.youtube.com/channel/UC04J-PyswfCclM_-FoQsghA",
           icon: "mdi-youtube"
         },
         {
-          link: "",
+          link: "mailto:henrieta.gwc@gmail.com",
           icon: "mdi-email"
         },
       ],

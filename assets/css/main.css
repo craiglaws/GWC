@@ -51,6 +51,15 @@
   margin-bottom: 40px !important;
 }
 
+/* Hover */
+.scale-hover{
+  transition: transform .3s ease-in-out;
+}
+
+.scale-hover:hover, .scale-hover:active, .scale-hover:focus{
+  transform: scale(1.1);
+}
+
 /* Fonts */
 
 h1, h2, h3, h4, h5{
@@ -74,6 +83,26 @@ h1, h2, h3, h4, h5{
 .title-xl{
   text-transform: uppercase;
   font-size: 3rem;
+}
+
+
+@media(max-width: 768px){
+  .gwc-row{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .gwc-row-5{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .gwc-t-5{
+    padding-top: 3rem;
+  }
+  
+  .gwc-b-3{
+    padding-bottom: 2rem;
+  }
 }
 
 @media(max-width: 450px){
