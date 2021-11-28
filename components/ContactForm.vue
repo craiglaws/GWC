@@ -74,7 +74,7 @@
       </div>
     </v-form>
     <v-slide-y-transition>
-      <div v-if="showError" class="py-1 mt-4">
+      <div v-show="showError" class="py-1 mt-4">
         <v-alert dense type="error"
           >Sorry, there was an error submitting your message.
           Please try again.
@@ -82,7 +82,7 @@
       </div>
     </v-slide-y-transition>
     <v-slide-y-transition hide-on-leave>
-        <div v-if="showSuccess" class="mt-4 py-1">
+        <div v-show="showSuccess" class="mt-4 py-1">
           <v-alert type="success" prominent>
             Thanks for your message.<br>
             I will be in touch as soon as possible.

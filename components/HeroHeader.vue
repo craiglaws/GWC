@@ -6,7 +6,6 @@
     <div class="hero-box">
       <h1 class="title-lg font-white" v-show="$vuetify.breakpoint.mdAndUp" v-html="title"></h1>
       <h1 class="title-lg font-white" v-show="$vuetify.breakpoint.smAndDown" v-html="mobileTitle"></h1>
-      <h5 v-if="quote" class="font-secondary" v-html="quote"></h5>
     </div>
   </div>
 </template>
@@ -17,7 +16,6 @@ export default {
     title: String,
     mobileTitle: String,
     image: String,
-    quote: String
   }
 }
 </script>

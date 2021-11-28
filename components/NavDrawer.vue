@@ -12,7 +12,7 @@
         <v-btn @click="closeNav" class="close-btn" fab small text>
           <v-icon color="white">mdi-close</v-icon>
         </v-btn>
-        <nuxt-link to="/">
+        <nuxt-link to="/" @click="closeNav">
           <nuxt-img src="/logos/gwc-logo-light-nostrap.png" class="nav-logo mt-4"></nuxt-img>
         </nuxt-link>
         <div class="d-flex flex-column mt-8">
@@ -137,6 +137,12 @@ export default {
   position: absolute;
   top: -20px;
   right: 20px;
+}
+
+@media(min-width: 769px){
+  .nav-drawer{
+    display: none !important;
+  }
 }
 
 @media(max-width: 700px){
