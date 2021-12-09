@@ -1,6 +1,7 @@
 <template>
   <div
     class="hero-bg"
+    :class="{'hero-bg-plain' : !mobileImage}"
     :style="{ backgroundImage: 'url(' + image + ')' }"
   >
     <div class="hero-box">
@@ -16,6 +17,10 @@ export default {
     title: String,
     mobileTitle: String,
     image: String,
+    mobileImage: {
+      type: Boolean,
+      default: true
+    }
   }
 }
 </script>
@@ -43,6 +48,10 @@ export default {
 
 @media(max-width: 600px){
   .hero-bg{
+    height: 60vh;
+
+  }
+  .hero-bg-plain{
     background-color: rgba(43, 77, 87, 0.8);
     background-image: none !important;
     height: 50vh;

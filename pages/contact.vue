@@ -62,6 +62,18 @@ export default {
         },
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Contact',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "I am just a call, email or message away to help grow your business with confidence"
+        },
+      ],
+    }
   }
 
 }

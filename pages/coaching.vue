@@ -196,6 +196,18 @@ export default {
       const element = this.$refs[refName];
       element.scrollIntoView({ behavior: "smooth" });
     }
+  },
+  head() {
+    return {
+      title: 'Coaching',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Sales coaching develops each salesperson's full potential. It boosts confidence and improves social, communication and questioning skills to discover areas for improvement and possibilities for new levels of success."
+        },
+      ],
+    }
   }
 };
 </script>

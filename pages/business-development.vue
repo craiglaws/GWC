@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroHeader title="Opportunities for sales at all times." mobileTitle="Opportunities for<br>sales at all times" image="/images/bus-dev-2.jpg"/>
+    <HeroHeader title="Opportunities for sales at all times." mobileTitle="Opportunities for<br>sales at all times" image="/images/bus-dev-2.jpg" />
     <v-row class="gwc-row-5">
       <v-col cols="11" md="10" class="mx-auto">
         <h2 class="mb-6">Increase your sales. Increase your profitability.</h2>
@@ -41,6 +41,18 @@ export default {
         'Confirm starting and finish dates'
 
       ]
+    }
+  },
+  head() {
+    return {
+      title: 'Business Development',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "I can help you with sales growth, business expansion, the formation of strategic partnerships and increased profitability focusing on creating long-term value rather than quick cash solutions."
+        },
+      ],
     }
   }
 }

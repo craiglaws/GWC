@@ -6,9 +6,9 @@
         <v-btn @click="closeNav" class="close-btn" fab small text>
           <v-icon color="white">mdi-close</v-icon>
         </v-btn>
-        <nuxt-link to="/" @click="closeNav">
+        <div>
           <nuxt-img src="/logos/gwc-logo-light-nostrap.png" class="nav-logo mt-4"></nuxt-img>
-        </nuxt-link>
+        </div>
         <div class="d-flex flex-column mt-8">
           <v-btn
             v-for="(navLink, i) in navOptions"
@@ -23,6 +23,7 @@
             {{navLink.text}}
           </v-btn>
         </div>
+        <h1>TEST</h1>
         <div class="d-flex justify-center mt-8">
           <a 
             v-for="(social, i) in socials"
@@ -45,6 +46,10 @@ export default {
   data(){
     return{
       navOptions: [
+         {
+          text: 'Home',
+          path: '/'
+        },
          {
           text: 'Coaching',
           path: '/coaching'

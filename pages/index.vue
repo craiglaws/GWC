@@ -67,6 +67,18 @@ export default {
         },
       ]
     }
+  },
+  head() {
+    return {
+      title: 'GWC',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Most people say they want to achieve their targets, but not many are willing to put in the work to make it happen. Selling is hard. If it was easy, everyone would do it. I'm here to help you take that step and start to grow your business with confidence."
+        },
+      ],
+    }
   }
 
 }

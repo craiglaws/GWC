@@ -36,6 +36,19 @@
 <script>
 export default {
 
+  head() {
+    return {
+      title: 'About',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "I’ve had an incredibly successful sales career and now I’m ready to share my experience by training others to - Sell with confidence & Grow with confidence"
+        },
+      ],
+    }
+  }
+
 }
 </script>
 
