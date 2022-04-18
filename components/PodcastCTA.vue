@@ -15,7 +15,7 @@
               View all videos
             </v-btn>
           </div>
-          <iframe width="400" height="300" src="https://www.youtube.com/embed/mPhwSB1bJYo" frameborder="0" class="flex-shrink-0 youtube-embed">
+          <iframe width="400" height="300" src="https://www.youtube.com/embed/pfXsMNOUkAY" frameborder="0" class="flex-shrink-0 youtube-embed">
           </iframe>
         </div>
       </v-col>
